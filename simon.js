@@ -56,6 +56,14 @@ function checkAns(idx){
                 h3.innerHTML=`CONGRATS !! you reached 10 levels. Wait for 10 sec. After 10sec ,game will continue`;
                 setTimeout(levelUp,10000);
             }
+                 else if(level==13){
+                h3.innerHTML=`CONGRATS !! you reached 13 levels. Wait for 10 sec. After 20sec ,game will continue`;
+                setTimeout(levelUp,20000);
+            }
+                   else if(level==14){
+                h3.innerHTML=`CONGRATS !! you reached 14 levels. Wait for 30 sec. After 10sec ,game will continue`;
+                setTimeout(levelUp,30000);
+            }
            else{
             h3.innerHTML=`ALERTS`;
             setTimeout(levelUp,300);
