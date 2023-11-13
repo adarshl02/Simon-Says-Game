@@ -61,7 +61,7 @@ function checkAns(idx){
                 setTimeout(levelUp,20000);
             }
                    else if(level==14){
-                h3.innerHTML=`CONGRATS !! you reached 14 levels. Wait for 30 sec. After 10sec ,game will continue`;
+                h3.innerHTML=`CONGRATS !! you reached 14 levels. Wait for 30 sec. After 30sec ,game will continue`;
                 setTimeout(levelUp,30000);
             }
            else{
