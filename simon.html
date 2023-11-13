@@ -29,6 +29,12 @@
     </div>
 
    
-    <script src="simon.js"></script>
+    <script src="simon.js">
+             function playSound(name) {
+        let audio = new Audio(name);
+        audio.play();
+      }
+      playSound("welcome.mp3");
+    </script>
 </body>
 </html>
