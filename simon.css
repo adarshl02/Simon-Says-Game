@@ -1,0 +1,78 @@
+body{
+    text-align: center;
+    
+}
+.heading{
+    animation: my 5s  1s infinite alternate-reverse ;
+    margin: 20px 300px 20px;
+    border-radius: 3rem;
+    padding: 3px;
+    box-shadow: 5px 5px 10px black;
+}
+
+@keyframes my{
+    0%{background-color: #ea7171;}
+    25%{background-color: rgb(208, 194, 72);}
+    50%{background-color: rgb(51, 150, 51);}
+    75%{background-color: rgb(0, 110, 255);}
+    100%{background-color: rgb(255, 192, 247);}
+}
+
+
+.btn{
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 2rem;
+   
+}
+.btn:hover{
+    box-shadow: 7px 7px 10px black;
+}
+.btn-container{
+    background-color: rgb(0, 117, 128);
+    display: flex;
+    justify-content: center;
+    margin: 10px 280px 10px;
+    border-radius: 15%;
+    box-shadow: 2px 2px 15px black;
+    
+}
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.purple{
+    background-color: purple;
+}
+
+.flash{
+    background-color: #fff;
+}
+.userflash{
+    background-color: grey;
+}
+
+.change{
+    border-radius: 10px;
+     background-color: blanchedalmond;
+     margin: 30px 400px 30px;
+     padding: 1px 0px 1px;
+     position: relative;
+     overflow: hidden;
+ }
+ .chge{
+    background-color: white;
+      border-radius: 1em;
+      padding: 2px 10px 2px;   
+}
+.chge:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;   
+}
