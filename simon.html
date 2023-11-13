@@ -9,18 +9,20 @@
 <body>
     <div class="heading"><h1>SIMON SAYS GAME</h1></div>
     <h2>Press any keyboard key to start</h2>
+    <h2>OR Press <button class="startb chge">START</button></h2>
+    <h3>ALERTS</h3>
     <div>Game flash -- white <br>
     User flash -- grey  </div>
 
     <div class="btn-container">
         <div class="line-one">
-            <div class="btn red" type="button" id="red">1</div>
-        <div class="btn yellow" type="button" id="yellow">2</div>
+            <div class="btn red " type="button" id="red">1</div>
+        <div class="btn yellow " type="button" id="yellow">2</div>
     </div>
         
         <div class="line-two">
-            <div class="btn green" type="button" id="green">3</div>
-        <div class="btn purple" type="button" id="purple">4</div>
+            <div class="btn green " type="button" id="green">3</div>
+        <div class="btn purple " type="button" id="purple">4</div>
         </div>
     </div>
 
@@ -28,13 +30,14 @@
         <h4>To change interface of website .</h4> <button class="chge">Press here</button>
     </div>
 
+     <audio controls>
+        <source src="audio/welcome.mp3" type="audio/mpeg">
+     </audio>
+  
+
    
     <script src="simon.js">
-             function playSound(name) {
-        let audio = new Audio(name);
-        audio.play();
-      }
-      playSound("welcome.mp3");
+
     </script>
 </body>
 </html>
