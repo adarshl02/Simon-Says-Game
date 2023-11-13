@@ -30,7 +30,7 @@ function userFlash(btn){
     btn.classList.add("userflash");
     setTimeout(function(){
         btn.classList.remove("userflash");
-    },250);
+    },1000);
 }
 
 function levelUp(){
