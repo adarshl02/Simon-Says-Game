@@ -6,12 +6,12 @@ let btns=["yellow","red","green","purple"];
 let started=false;
 let level=0;
 
-
-
 let name=prompt("Please enter your name : ");
 
 let h2=document.querySelector("h2");
-document.addEventListener("keypress",function(){
+let h3=document.querySelector("h3");
+let startb=document.querySelector(".startb");
+startb.addEventListener("click",function(){
     if(started==false){
         console.log("game started");
         started=true;
@@ -34,10 +34,11 @@ function userFlash(btn){
 }
 
 function levelUp(){
+    
     userSeq=[];
     level++;
     h2.innerText=`Level ${level}`;
-
+    
     //random choose
     let ranIdx=Math.floor(Math.random()*4);
     let randColor=btns[ranIdx];
@@ -51,9 +52,17 @@ function levelUp(){
 function checkAns(idx){
     if(userSeq[idx]==gameSeq[idx]){
         if(userSeq.length==gameSeq.length){
-           setTimeout(levelUp,1000);
+            if(level==10){
+                h3.innerHTML=`CONGRATS !! you reached 10 levels. Wait for 10 sec. After 10sec ,game will continue`;
+                setTimeout(levelUp,10000);
+            }
+           else{
+            h3.innerHTML=`ALERTS`;
+            setTimeout(levelUp,300);
+           }
         }
     }else{
+        player();
         h2.innerHTML=`Game Over !<br> ${name} . Your score is  <b>${level-1}</b> <br>Press any key to start. `;
         document.querySelector("body").style.backgroundColor="red";   
         setTimeout(function(){
@@ -67,7 +76,7 @@ function btnpress(){
    // console.log(this);
     let btn=this;
     userFlash(btn);          //through user
-
+    click();
      userColor=btn.getAttribute("id");
      userSeq.push(userColor);
 
@@ -78,6 +87,15 @@ function btnpress(){
 let allbtns=document.querySelectorAll(".btn");
 for(btn of allbtns){
     btn.addEventListener("click",btnpress);
+    btn.addEventListener("click",function(){
+        // let p=document.querySelector("p");
+         let randomColor=getRandomColor();
+       //  p.innerText=randomColor;
+     
+         let div=document.querySelector(".btn-container");
+         div.style.backgroundColor=randomColor;
+         console.log("color updated");
+     })
 }
 
 function reset(){
@@ -107,3 +125,13 @@ function getRandomColor(){
     let color=`rgb(${red},${green},${blue})`
     return color;
 }
+
+function player(){
+    let audio=new Audio("wrong.mp3");
+    audio.play();
+}
+function click(){
+    let audio=new Audio("click.wav");
+    audio.play();
+}
+
