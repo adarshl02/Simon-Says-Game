@@ -24,13 +24,13 @@ function gameFlash(btn){
     btn.classList.add("flash");
     setTimeout(function(){
         btn.classList.remove("flash");
-    },700);
+    },800);
 }
 function userFlash(btn){
     btn.classList.add("userflash");
     setTimeout(function(){
         btn.classList.remove("userflash");
-    },500);
+    },200);
 }
 
 function levelUp(){
