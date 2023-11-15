@@ -6,7 +6,7 @@ let btns=["yellow","red","green","purple"];
 let started=false;
 let level=0;
 
-let name=prompt("Please enter your name : ");
+let name=prompt("Please ,Enter your name : ");
 
 let h2=document.querySelector("h2");
 let h3=document.querySelector("h3");
